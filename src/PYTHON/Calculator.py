@@ -1,0 +1,2 @@
+#gg
+print("hola mundo")
