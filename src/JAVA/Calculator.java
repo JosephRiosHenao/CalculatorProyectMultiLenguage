@@ -27,7 +27,7 @@ public class Calculator {
     public static int PreguntarModo(int Modo) {
         boolean Ciclo = true;
         while (Ciclo) {
-            System.out.println("Digite el Modo de la calculadora \n 1. Console \n 2. JOptionPane \n 3. GUI");
+            System.out.println("Digite el Modo de la calculadora \n 1. Console \n 2. JOptionPane \n 3. JPanel");
             Modo = new Scanner(System.in).nextInt();
             if (Modo == 1 || Modo == 2 || Modo == 3){
                 System.out.println("--Modo registrado--");
