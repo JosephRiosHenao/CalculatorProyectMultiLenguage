@@ -13,6 +13,7 @@ public class Calculator {
         System.out.println(ModoElegido);
         switch (ModoElegido){
             case 1: //Console
+                boolean NivelCalcladora = JAVA.CalculatorConsole.NivelCalculadora();
                 JAVA.CalculatorConsole.Menu();
             break;
             case 2:
