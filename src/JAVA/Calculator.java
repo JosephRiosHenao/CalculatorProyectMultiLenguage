@@ -2,6 +2,8 @@ package JAVA;
 
 import java.util.Scanner;
 
+
+
 public class Calculator {
 
     public static int ModoElegido;
