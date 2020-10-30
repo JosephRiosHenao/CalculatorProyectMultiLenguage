@@ -7,14 +7,19 @@ import java.util.Scanner;
 public class Calculator {
 
     public static int ModoElegido;
+    public static boolean NivelCalcladora;
 
     public static void main(String[] args) {
         ModoElegido = PreguntarModo(0);
         System.out.println(ModoElegido);
         switch (ModoElegido){
             case 1: //Console
-                boolean NivelCalcladora = JAVA.CalculatorConsole.NivelCalculadora();
-                JAVA.CalculatorConsole.Menu();
+                NivelCalcladora = JAVA.CalculatorConsole.NivelCalculadora();
+                if (NivelCalcladora){ //Avanzado
+
+                }else{ //Basico
+
+                }
             break;
             case 2:
 
@@ -23,7 +28,6 @@ public class Calculator {
 
             break;
         }
-        PreguntarLVL();
         MenuInicial();
     }
     
@@ -42,8 +46,6 @@ public class Calculator {
         return Modo;
     }
 
-    public static void PreguntarLVL() {
-    }    
     public static void MenuInicial() {
         System.out.println("hola");
     }
