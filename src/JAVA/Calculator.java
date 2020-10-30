@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public static int ModoElegido;
+    public static int ModoElegido, OperacionElegida;
     public static boolean NivelCalcladora;
 
     public static void main(String[] args) {
@@ -18,6 +18,7 @@ public class Calculator {
                 if (NivelCalcladora){ //Avanzado
 
                 }else{ //Basico
+                    OperacionElegida = JAVA.CalculatorConsole.MenuBasico();
 
                 }
             break;
@@ -28,7 +29,6 @@ public class Calculator {
 
             break;
         }
-        MenuInicial();
     }
     
     public static int PreguntarModo(int Modo) {
@@ -44,9 +44,5 @@ public class Calculator {
             }
         }
         return Modo;
-    }
-
-    public static void MenuInicial() {
-        System.out.println("hola");
     }
 }
