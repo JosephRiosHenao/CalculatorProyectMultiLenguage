@@ -1,11 +1,12 @@
-Lista = [1,"hello",1.45,True]
-colors = ["yellow","blue","purple","brown"]
-
-number_list = list((0,1,2,3,4))
-print(number_list)
-
-r = list(range(0,10))
-print(r)
-
-print("yellow" in colors)
-
+Nombre = input("Digite su nombre: ")
+Ciclo = True
+while Ciclo:
+    Edad = (int)(input("Digite su edad: "))
+    if Edad >= 0 and Edad <= 100:
+        Ciclo = False
+        if Edad >= 18:
+            print("Usted Sr "+Nombre+" es mayor de edad")
+        if Edad <= 17:
+            print("Usted Sr "+Nombre+" es menor de edad")
+    else:
+        print("Digite un valor valido")
