@@ -1,4 +1,4 @@
-package JAVA;
+package BASH.JAVA;
 
 import java.util.Scanner;
 
