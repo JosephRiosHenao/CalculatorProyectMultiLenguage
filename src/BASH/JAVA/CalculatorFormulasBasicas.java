@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class CalculatorFormulasBasicas {
     boolean Ciclo, Ciclo2;
     Scanner Entrada = new Scanner(System.in);
-    public int[] num;
-
+    public int Cantidad;
+    public Double Resultado;
 
     public int NumerosMultiples(){
         int Confirmacion;
@@ -36,9 +36,20 @@ public class CalculatorFormulasBasicas {
                 System.out.println("Digite un dato valido");
             }
         }
+        return CantidadAEvaluar;
     }
 
-    public float Sumar(int NumerosDeNumeros){
+    public float Sumar(){
+        String MostrarResultado = " ";
+        Cantidad = NumerosMultiples();
+        double num[] = new double[Cantidad];
+        for (int i = 0; i < Cantidad; i++){
+            System.out.println("Digite el "+(i+1)+"° numero a sumar");
+            num[i] = Entrada.nextDouble();
+            MostrarResultado += "+ "+num[i]+" "  ;
+            Resultado += num[i];
+        }
 
+        return 0;
     }
 }
