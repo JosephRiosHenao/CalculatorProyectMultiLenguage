@@ -26,4 +26,5 @@ def SumarVarios(cantidad):
 
     return Resultado
 
-def SumaPocos()
+def SumaPocos(cantidad):
+    
