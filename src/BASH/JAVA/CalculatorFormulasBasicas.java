@@ -13,11 +13,11 @@ public class CalculatorFormulasBasicas {
     public int NumerosMultiples(){
         int Confirmacion;
         int CantidadAEvaluar = 0;
-        System.out.println("Digite cantidad de numeros a digitar");
-        CantidadAEvaluar = Entrada.nextInt();
         Ciclo = true;
         while (Ciclo){
-            if (CantidadAEvaluar >= 1){
+            System.out.println("Digite cantidad de numeros a digitar");
+            CantidadAEvaluar = Entrada.nextInt();
+            if (CantidadAEvaluar >= 2 && CantidadAEvaluar <= 10){
                 Ciclo = false;
                 System.out.println("--Operacion elegida registrada--");
                 return CantidadAEvaluar;
@@ -41,6 +41,12 @@ public class CalculatorFormulasBasicas {
         return CantidadAEvaluar;
     }
 
+
+    public void PedirNumeroDouble(){
+
+    }
+
+    
     public void Sumar(){
         Cantidad = NumerosMultiples();
         double num[] = new double[Cantidad];
@@ -49,10 +55,12 @@ public class CalculatorFormulasBasicas {
             num[i] = Entrada.nextDouble();
             if (i == 0){
                 MostrarResultado = "El resultado es: "+num[i];
+            }else{
+                MostrarResultado += " + "+num[i];
+                Resultado += num[i];
             }
-            MostrarResultado += " + "+num[i];
-            Resultado += num[i];
         }
         MostrarResultado += " = "+Resultado;
+        System.out.println(MostrarResultado);
     }
 }
