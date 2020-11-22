@@ -1,4 +1,3 @@
-package BASH.JAVA;
 
 public class CalculatorMain {
 
@@ -7,15 +6,15 @@ public class CalculatorMain {
     public static boolean CicloDeCalculadoraBasica;
 
     public static void main(String[] args) {
-        NivelCalcladora = BASH.JAVA.CalculatorConsole.NivelCalculadora();
+        /*NivelCalcladora = CalculatorConsole.NivelCalculadora();
         if (NivelCalcladora){ //Avanzado
         
         }else{ //Basico
             CicloDeCalculadoraBasica = true;
             while (CicloDeCalculadoraBasica){
-                OperacionElegida = BASH.JAVA.CalculatorConsole.MenuBasico();
+                OperacionElegida = CalculatorConsole.MenuBasico();
                 if (OperacionElegida == 1){ //Suma
-                    BASH.JAVA.CalculatorFormulasBasicas Sumar = new BASH.JAVA.CalculatorFormulasBasicas();
+                    CalculatorFormulasBasicas Sumar = new CalculatorFormulasBasicas();
                     Sumar.Sumar();
                 }else if (OperacionElegida == 2){ //Resta
                     
@@ -33,6 +32,8 @@ public class CalculatorMain {
                 }
             }
             
-        }   
+        }  */ 
+        GUI.JAVA.CalculatorGUI.main(args);
+        
     }
 }

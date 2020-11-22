@@ -19,3 +19,17 @@ def LvLCalcculadoraConsole():
         else:
             print("\n Digite una opcion valida \n")
     return Eleccion
+
+
+def Sumar(numero1, numero2):
+    Resultado = numero1 + numero2
+    return Resultado
+
+a = 4
+b = 3
+
+print(Sumar(a,b))
+print(Sumar(1,1))
+
+Resultado = Sumar(10,10) 
+print(Resultado)
