@@ -34,6 +34,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
         Maximizar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        PaswordText = new javax.swing.JPasswordField();
+        UsernameText = new javax.swing.JTextField();
+        LoginButton = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,6 +85,14 @@ public class CalculatorGUI extends javax.swing.JFrame {
         Maximizar.setText("▭");
         Maximizar.setAlignmentY(0.0F);
         Maximizar.setOpaque(true);
+        Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MaximizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MaximizarMouseExited(evt);
+            }
+        });
         jPanel2.add(Maximizar);
         Maximizar.setBounds(330, -1, 60, 40);
 
@@ -96,6 +107,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MinimizarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MinimizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MinimizarMouseExited(evt);
+            }
         });
         jPanel2.add(Minimizar);
         Minimizar.setBounds(270, 0, 60, 40);
@@ -106,6 +123,41 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jLabel2.setAlignmentY(0.0F);
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(30, 30, 30), 0));
 
+        PaswordText.setBackground(new java.awt.Color(30, 30, 30));
+        PaswordText.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
+        PaswordText.setForeground(new java.awt.Color(255, 255, 255));
+        PaswordText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PaswordText.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
+        PaswordText.setSelectionColor(new java.awt.Color(187, 187, 187));
+
+        UsernameText.setBackground(new java.awt.Color(30, 30, 30));
+        UsernameText.setFont(new java.awt.Font("Consolas", 0, 24)); // NOI18N
+        UsernameText.setForeground(new java.awt.Color(255, 255, 255));
+        UsernameText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        UsernameText.setToolTipText("");
+        UsernameText.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
+        UsernameText.setSelectionColor(new java.awt.Color(187, 187, 187));
+        UsernameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsernameTextActionPerformed(evt);
+            }
+        });
+
+        LoginButton.setBackground(new java.awt.Color(30, 30, 30));
+        LoginButton.setFont(new java.awt.Font("Segoe UI Symbol", 0, 36)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginButton.setText("LOGIN");
+        LoginButton.setOpaque(true);
+        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -113,8 +165,18 @@ public class CalculatorGUI extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(44, 44, 44))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(44, 44, 44))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(UsernameText, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(94, 94, 94))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PaswordText, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(112, 112, 112))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +184,13 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(0, 192, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(UsernameText, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PaswordText, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(LoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+                .addGap(26, 26, 26))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
@@ -160,6 +228,41 @@ public class CalculatorGUI extends javax.swing.JFrame {
         this.setLocation(x-xx,y-xy);
     }//GEN-LAST:event_jPanel2MouseDragged
 
+    private void MinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseEntered
+        // TODO add your handling code here:
+        Minimizar.setBackground(new Color(53,53,53));
+    }//GEN-LAST:event_MinimizarMouseEntered
+
+    private void MinimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseExited
+        // TODO add your handling code here:
+        Minimizar.setBackground(new Color(30,30,30));
+    }//GEN-LAST:event_MinimizarMouseExited
+
+    private void MaximizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseEntered
+        // TODO add your handling code here:
+        Maximizar.setBackground(new Color(53,53,53));
+    }//GEN-LAST:event_MaximizarMouseEntered
+
+    private void MaximizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseExited
+        // TODO add your handling code here:
+        Maximizar.setBackground(new Color(30,30,30));
+    }//GEN-LAST:event_MaximizarMouseExited
+
+    private void UsernameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsernameTextActionPerformed
+
+    private void LoginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseEntered
+        // TODO add your handling code here:
+        LoginButton.setBackground(new Color(53,53,53));
+    }//GEN-LAST:event_LoginButtonMouseEntered
+
+    private void LoginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseExited
+        // TODO add your handling code here:
+        LoginButton.setBackground(new Color(30,30,30));
+    }//GEN-LAST:event_LoginButtonMouseExited
+
+   
     /**
      * @param args the command line arguments
      */
@@ -197,8 +300,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cerrar;
+    private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel Maximizar;
     private javax.swing.JLabel Minimizar;
+    private javax.swing.JPasswordField PaswordText;
+    private javax.swing.JTextField UsernameText;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
