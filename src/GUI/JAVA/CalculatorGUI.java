@@ -33,6 +33,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         Cerrar = new javax.swing.JLabel();
         Maximizar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -99,17 +100,29 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jPanel2.add(Minimizar);
         Minimizar.setBounds(270, 0, 60, 40);
 
+        jLabel2.setBackground(new java.awt.Color(30, 30, 30));
+        jLabel2.setForeground(new java.awt.Color(30, 30, 30));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ReourcesImages/PochoLogo.jpg"))); // NOI18N
+        jLabel2.setAlignmentY(0.0F);
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(30, 30, 30), 0));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(44, 44, 44))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 569, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(0, 192, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 600));
@@ -186,6 +199,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JLabel Cerrar;
     private javax.swing.JLabel Maximizar;
     private javax.swing.JLabel Minimizar;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
